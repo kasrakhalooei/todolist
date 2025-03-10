@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>todo list test</title>
+        <style>
+            htlm , body {
+                text-align: center;
+                background-color: #010e32;
+                direction: rtl;
+            }
+            .todo-list-container {
+                width: 420px;
+                text-align: center;
+                background-color: #001545;
+                padding: 50px;
+                min-height: 700px;
+            }
+            ul li {
+                display: block;
+                list-style: none;
+                font-size: 17px;
+                padding: 12px 8px 12px 50px;
+                cursor: pointer;
+                font-size: 25px;
+                margin-top: 20px;
+                color: #fff;
+            }
+            ul li.checked {
+                text-decoration: line-through;
+
+            }
+            ul li span {
+                background-color: #2d6eff;
+                padding: 0px 12px  ;
+                border-radius: 100%;
+                float: right;
+                text-decoration: none;
+                margin: 0;
+                font-size: 40px;
+                position: relative;
+                top: -5px;
+            }
+            #input-box {
+                padding: 24px;
+                background-color: #285ed8;
+                color: white;
+                border-radius: 15px;
+                border: none;
+                width: 283px;
+                font-size: 30px;
+                font-size: 14px;
+            }
+            #input-box::placeholder {
+                color: lightgray;
+                font-size: 16px;
+            }
+            .submit {
+                padding: 22px;
+                background-color: #234cab;
+                border-radius: 15px;
+                border: none;
+                color: white;
+                font-size: 16px;
+            }
+            .calculator {
+                direction: ltr;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="todo-list-container">
+            <div class="">
+                <input type="text" placeholder="متن مورد نطر خود را وارد کنید" id="input-box">
+                <button onclick="addtast()" class="submit">افرودن</button>
+            </div>
+            <ul id="task-list">
+                <li>تمیز کردن اتاق خواب <span>×</span></li>
+            </ul>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
