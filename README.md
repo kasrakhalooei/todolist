@@ -4,9 +4,14 @@ A simple and interactive Todo List built with JavaScript. This project allows us
 
 Features:
 <br>
-Add new tasks
+Add new tasks   
+
 Edit existing tasks
+
 Delete tasks
+
 Mark tasks as completed
+
 Save tasks using local storage
+
 Feel free to contribute or suggest improvements! 🚀
