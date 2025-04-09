@@ -6,17 +6,22 @@
         <link rel="stylesheet" href="css.css">
         <script src="https://kit.fontawesome.com/79be424806.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		body {
+			direction: ltr;
+		}
+	</style>
     </head>
     <body>
         <input type="checkbox" class="theme-switcher">
         <div class="todo">
             <form class="header" onsubmit="return false;">
                 <h1>ToDo List</h1>
-                <input type="text" id="input-box" class="todo-input" placeholder="متن مورد نظر خود را وارد کنید...">
-                <button class="btn-add" onclick="addtast()">افزودن</button>
+                <input type="text" id="input-box" class="todo-input" placeholder="Enter your desired text...">
+                <button class="btn-add" onclick="addtast()">Add</button>
             </form>
             <div class="todolist">
-                <h3>لیست کار های شما :</h3>
+                <h3>Your to-do list :</h3>
                 <p class="error-info"></p>
                 <ul id="task-list">
 
