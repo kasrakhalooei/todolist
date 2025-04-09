@@ -1,0 +1,243 @@
+@font-face {
+    font-family: tanha;
+    src: url('tanha-font-v0.9/Tanha.eot');
+    src: url('tanha-font-v0.9/Tanha.eot?#iefix') format('FontName-opentype'),
+    url('tanha-font-v0.9/Tanha.woff') format('woff'),
+    url('tanha-font-v0.9/Tanha.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 22px;
+    color: #333;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+body.light-theme .theme-switcher {
+    background-color: #fff;
+    border-color: #3498db;
+    color: #3498db;
+    font-family: Calibri;
+}
+body:not(.light-theme) .theme-switcher {
+    background-color: #2c3e50;
+    border-color: #ecf0f1;
+    color: #ecf0f1;
+}
+.theme-switcher:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+body.light-theme .theme-switcher::before {
+    content: "\f185";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+body:not(.light-theme) .theme-switcher::before {
+    content: "\f186";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+body:not(.light-theme) {
+    background-color: #121212;
+}
+body.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fc;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    direction: rtl;
+}
+
+/* برای ظاهر دکمه‌ها و قسمت‌های مختلف */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* استایل برای ورودی و دکمه‌ها */
+.todo-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    outline: none;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.todo-input::placeholder {
+    color: #ccc;
+}
+
+.todo-input:focus {
+    border-color: #3498db;
+}
+
+.btn-add {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #2980b9;
+}
+
+/* تنظیمات استایل برای لیست و آیتم‌های آن */
+.todo {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.todolist {
+    margin-top: 20px;
+}
+
+.todolist li {
+    background-color: #ecf0f1;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todolist li:hover {
+    background-color: #e3e9f1;
+}
+
+/* استایل برای دکمه‌های تیک و حذف */
+.tools button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tools button:hover {
+    transform: scale(1.1);
+}
+
+.complete {
+    color: #2ecc71;
+}
+
+.delete {
+    color: #e74c3c;
+}
+
+/* استایل برای فعالیت‌های انجام شده */
+.completed {
+    text-decoration: line-through;
+    color: #bdc3c7;
+    opacity: 0.7;
+}
+
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #3498db;
+}
+
+.light-theme {
+    background-color: #f4f7fc;
+    color: #2c3e50;
+}
+
+.light-theme .todo {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .btn-add {
+    background-color: #3498db;
+}
+
+.light-theme .todo-input {
+    border: 1px solid #ddd;
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todolist li {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .todo {
+        padding: 15px;
+    }
+
+    .todo-input, .btn-add {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
